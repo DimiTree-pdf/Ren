@@ -1,6 +1,14 @@
 from browser import document, prompt, html, alert
-import base64
+from browser.local_storage import storage
+import json, base64
 b64_map = {}
+def load_data():
+    data = storage.get("b64data")
+    if data:
+        return json.loads(data)
+    else:
+        storage["b64data"] = json.dumps({})
+        return {}
 def base64_compute(_):
     value = document["text-src"].value
     if not value:
@@ -11,9 +19,11 @@ def base64_compute(_):
         return
     b64data = base64.b64encode(value.encode()).decode()
     b64_map[value] = b64data
+    storage["b64data"] = json.dumps(b64_map)
     display_map()
 def clear_map(_) -> None:
     b64_map.clear()
+    storage["b64data"] = json.dumps({})
     document["b64-display"].clear()
 def display_map() -> None:
     table = html.TABLE(Class="pure-table")
@@ -23,5 +33,7 @@ def display_map() -> None:
     base64_display.clear()
     base64_display <= table
     document["text-src"].value = ""
+b64_map = load_data()
+display_map()
 document["submit"].bind("click", base64_compute)
 document["clear-btn"].bind("click", clear_map)
