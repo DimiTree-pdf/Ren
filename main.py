@@ -4,13 +4,13 @@ import hashlib
 hashes = {
     "sha-1": hashlib.sha1,
     "sha-256": hashlib.sha256,
-    "sha-512": "test",
+    "sha-512": hashlib.sha512,
 }
 Vue = window.Vue
 def compute_hash(evt):
     value = this().input_text
     if not value:
-        alert("You need to enter a value")
+        alert(hashlib.sha256.update("You need to enter a value".encode()).hexdigest())
         return
     hash_object = hashes[this().algo]()
     hash_object.update(value.encode())
