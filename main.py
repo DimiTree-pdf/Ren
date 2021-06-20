@@ -1,39 +1,31 @@
-from browser import document, prompt, html, alert
-from browser.local_storage import storage
-import json, base64
-b64_map = {}
-def load_data():
-    data = storage.get("b64data")
-    if data:
-        return json.loads(data)
-    else:
-        storage["b64data"] = json.dumps({})
-        return {}
-def base64_compute(_):
-    value = document["text-src"].value
+from browser import alert, window
+from javascript import this
+import hashlib
+hashes = {
+    "sha-1": hashlib.sha1,
+    "sha-256": hashlib.sha256,
+    "sha-512": hashlib.sha512,
+}
+Vue = window.Vue
+def compute_hash(evt):
+    value = this().input_text
     if not value:
         alert("You need to enter a value")
         return
-    if value in b64_map:
-        alert(f"'The base64 value of '{value}' already exists: '{b64_map[value]}'")
-        return
-    b64data = base64.b64encode(value.encode()).decode()
-    b64_map[value] = b64data
-    storage["b64data"] = json.dumps(b64_map)
-    display_map()
-def clear_map(_) -> None:
-    b64_map.clear()
-    storage["b64data"] = json.dumps({})
-    document["b64-display"].clear()
-def display_map() -> None:
-    table = html.TABLE(Class="pure-table")
-    table <= html.THEAD(html.TR(html.TH("Text") + html.TH("Base64")))
-    table <= (html.TR(html.TD(key) + html.TD(b64_map[key])) for key in b64_map)
-    base64_display = document["b64-display"]
-    base64_display.clear()
-    base64_display <= table
-    document["text-src"].value = ""
-b64_map = load_data()
-display_map()
-document["submit"].bind("click", base64_compute)
-document["clear-btn"].bind("click", clear_map)
+    hash_object = hashes[this().algo]()
+    hash_object.update(value.encode())
+    hex_value = hash_object.hexdigest()
+    this().hash_value = hex_value
+def created():
+    for name in hashes:
+        this().algos.append(name)
+    this().algo = next(iter(hashes))
+app = Vue.createApp(
+    {
+        "el": "#app",
+        "created": created,
+        "data": lambda _: {"hash_value": "", "algos": [], "algo": "", "input_text": ""},
+        "methods": {"compute_hash": compute_hash},
+    }
+)
+app.mount("#app")
