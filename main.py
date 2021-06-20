@@ -4,7 +4,7 @@ import hashlib
 hashes = {
     "sha-1": hashlib.sha1,
     "sha-256": hashlib.sha256,
-    "sha-512": hashlib.sha512,
+    "sha-512": "test",
 }
 Vue = window.Vue
 def compute_hash(evt):
