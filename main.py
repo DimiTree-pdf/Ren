@@ -5,6 +5,6 @@ def clearchildren():
     #del cont[newdiv]
     x = 1
 button1 = html.BUTTON("Clear me! (hopefully)")
+button1.bind("click", clearchildren())
 newdiv <= button1
-newdiv[button1].bind("click", clearchildren())
 cont <= newdiv
