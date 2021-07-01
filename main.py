@@ -30,7 +30,7 @@ def signup(_):
 lastsignbool = True
 signupbutton.BIND("click", switchsignup)
 loginbutton.BIND("click", switchlogin) 
-newdiv <= signupbutton
+newdiv <= signupbutton + html.BR()
 newdiv <= loginbutton
 cont <= newdiv
 #signupdiv = html.DIV(id = "signupdiv")
