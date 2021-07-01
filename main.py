@@ -33,33 +33,33 @@ loginbutton.BIND("click", switchlogin)
 newdiv <= signupbutton
 newdiv <= loginbutton
 cont <= newdiv
-signupdiv = html.DIV(id = "signupdiv")
-signupusername = html.INPUT(type="text", name="username", value="Username")
-signuppassword = html.INPUT(type="text", name="password", value="Password")
-signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
-signupdiv <=  signupusername + html.BR()
-signupdiv <=  signuppassword + html.BR()
-signupdiv <=  signupconfirm + html.BR()
-submitsignup = html.BUTTON("Sign Up")
-submitsignup.BIND("click", signup)
-signupdiv <= submitsignup
-cont <= signupdiv
-while not signedin:
-    if lastsignbool != signupbool:
+#signupdiv = html.DIV(id = "signupdiv")
+#signupusername = html.INPUT(type="text", name="username", value="Username")
+#signuppassword = html.INPUT(type="text", name="password", value="Password")
+#signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
+#signupdiv <=  signupusername + html.BR()
+#signupdiv <=  signuppassword + html.BR()
+#signupdiv <=  signupconfirm + html.BR()
+#submitsignup = html.BUTTON("Sign Up")
+#submitsignup.BIND("click", signup)
+#signupdiv <= submitsignup
+#cont <= signupdiv
+#while not signedin:
+#    if lastsignbool != signupbool:
         #this means that the page loaded has changed. 
         #therefore, we must redraw the page
-        if signupbool:
+#        if signupbool:
             #we have to redraw the sign-up page
-            del cont[logindiv]
-            signupdiv = html.DIV(id = "signupdiv")
-            signupusername = html.INPUT(type="text", name="username", value="Username")
-            signuppassword = html.INPUT(type="text", name="password", value="Password")
-            signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
-            signupdiv <=  signupusername + html.BR()
-            signupdiv <=  signuppassword + html.BR()
-            signupdiv <=  signupconfirm + html.BR()
-            submitsignup = html.BUTTON("Sign Up")
-            submitsignup.BIND("click", signup)
-            signupdiv <= submitsignup
-            cont <= signupdiv
+#           del cont[logindiv]
+#           signupdiv = html.DIV(id = "signupdiv")
+#           signupusername = html.INPUT(type="text", name="username", value="Username")
+#           signuppassword = html.INPUT(type="text", name="password", value="Password")
+#           signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
+#           signupdiv <=  signupusername + html.BR()
+#           signupdiv <=  signuppassword + html.BR()
+#           signupdiv <=  signupconfirm + html.BR()
+#           submitsignup = html.BUTTON("Sign Up")
+#           submitsignup.BIND("click", signup)
+#           signupdiv <= submitsignup
+#           cont <= signupdiv
             
