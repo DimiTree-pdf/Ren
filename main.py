@@ -44,6 +44,7 @@ submitsignup = html.BUTTON("Sign Up")
 submitsignup.BIND("click", signup)
 signupdiv <= submitsignup
 newdiv <= signupdiv
+cont <= newdiv
 while not signedin:
     if lastsignbool != signupbool:
         #this means that the page loaded has changed. 
@@ -61,5 +62,5 @@ while not signedin:
             submitsignup = html.BUTTON("Sign Up")
             submitsignup.BIND("click", signup)
             signupdiv <= submitsignup
-            newdiv <= signupdiv
+            cont <= signupdiv
             
