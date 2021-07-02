@@ -1,7 +1,7 @@
 from browser import document, prompt, html, alert
-import secrets
-from argon2 import PasswordHasher
-ph = PasswordHasher()
+#import secrets
+#from argon2 import PasswordHasher
+#ph = PasswordHasher()
 signupbool = True
 signedin = False
 cont = document["container"]
