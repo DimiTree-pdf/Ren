@@ -12,6 +12,7 @@ def switchlogin(_):
     signupbool = False
 def switchsignup(_):
     signupbool = True
+    print("It worked!")
 #def signup(_):
     #username = cont["signupdiv"]["signupusername"].value
     #password = cont["signupdiv"]["signuppassword"].value
@@ -28,7 +29,7 @@ def switchsignup(_):
     #TODO: store account information in db 
     #signedin = True
 lastsignbool = True
-#signupbutton.BIND("click", switchsignup)
+signupbutton.BIND("click", switchsignup)
 #loginbutton.BIND("click", switchlogin) 
 signinscreendiv <= signupbutton + html.BR()
 #newdiv <= loginbutton
