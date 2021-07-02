@@ -12,7 +12,7 @@ def switchlogin(_):
     signupbool = False
 def switchsignup(_):
     signupbool = True
-    print("It worked!")
+    alert("It worked!")
 #def signup(_):
     #username = cont["signupdiv"]["signupusername"].value
     #password = cont["signupdiv"]["signuppassword"].value
