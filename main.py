@@ -5,7 +5,7 @@ from browser import document, prompt, html, alert
 signupbool = True
 signedin = False
 cont = document["container"]
-signinscreendiv = html.DIV(id = "signinscreendiv")
+signinscreendiv = html.DIV(id = "signinscreendiv")    
 signupbutton = html.BUTTON("Sign Up Page")
 loginbutton = html.BUTTON("Log In Page")
 def switchlogin(_):
@@ -34,9 +34,14 @@ signinscreendiv <= signupbutton + html.BR()
 signinscreendiv <= loginbutton
 cont <= signinscreendiv
 signupdiv = html.DIV(id = "signupdiv")
-signupusername = html.INPUT(type="text", name="username", value="Username")
-signuppassword = html.INPUT(type="text", name="password", value="Password")
-signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
+signupusername = html.INPUT(type="text", name="Username", value="Username")
+signuppassword = html.INPUT(type="text", name="Password", value="Password")
+signupconfirm = html.INPUT(type="text", name="Confirm Password", value="Confirm Password")
+#when mouse clicks outside of inputs, the filler text should be replaced
+def fillsignupinputs(_):
+    for child in signupdiv:
+        alert(child.class_name)
+#bind click to inputs so that they delete their text when clicked in
 signupdiv <=  signupusername + html.BR()
 signupdiv <=  signuppassword + html.BR()
 signupdiv <=  signupconfirm + html.BR()
