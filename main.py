@@ -29,11 +29,11 @@ def switchsignup(_):
     #TODO: store account information in db 
     #signedin = True
 lastsignbool = True
-#loginbutton.BIND("click", switchlogin) 
+#loginbutton.bind("click", switchlogin) 
 signinscreendiv <= signupbutton + html.BR()
 #newdiv <= loginbutton
 cont <= signinscreendiv
-cont["signinsrceendiv"]["signupbutton"].BIND("click", switchsignup)
+cont["signinsrceendiv"]["signupbutton"].bind("click", switchsignup)
 #signupdiv = html.DIV(id = "signupdiv")
 #signupusername = html.INPUT(type="text", name="username", value="Username")
 #signuppassword = html.INPUT(type="text", name="password", value="Password")
@@ -42,7 +42,7 @@ cont["signinsrceendiv"]["signupbutton"].BIND("click", switchsignup)
 #signupdiv <=  signuppassword + html.BR()
 #signupdiv <=  signupconfirm + html.BR()
 #submitsignup = html.BUTTON("Sign Up")
-#submitsignup.BIND("click", signup)
+#submitsignup.bind"click", signup)
 #signupdiv <= submitsignup
 #cont <= signupdiv
 #while not signedin:
@@ -60,7 +60,7 @@ cont["signinsrceendiv"]["signupbutton"].BIND("click", switchsignup)
 #           signupdiv <=  signuppassword + html.BR()
 #           signupdiv <=  signupconfirm + html.BR()
 #           submitsignup = html.BUTTON("Sign Up")
-#           submitsignup.BIND("click", signup)
+#           submitsignup.bind("click", signup)
 #           signupdiv <= submitsignup
 #           cont <= signupdiv
             
