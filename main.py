@@ -33,17 +33,17 @@ signupbutton.bind("click", switchsignup)
 signinscreendiv <= signupbutton + html.BR()
 signinscreendiv <= loginbutton
 cont <= signinscreendiv
-signupdiv = html.DIV(id = "signupdiv")
-signupusername = html.INPUT(type="text", name="username", value="Username")
-signuppassword = html.INPUT(type="text", name="password", value="Password")
-signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
-signupdiv <=  signupusername + html.BR()
-signupdiv <=  signuppassword + html.BR()
-signupdiv <=  signupconfirm + html.BR()
-submitsignup = html.BUTTON("Sign Up")
+#signupdiv = html.DIV(id = "signupdiv")
+#signupusername = html.INPUT(type="text", name="username", value="Username")
+#signuppassword = html.INPUT(type="text", name="password", value="Password")
+#signupconfirm = html.INPUT(type="text", name="confirm", value="Confirm Password")
+#signupdiv <=  signupusername + html.BR()
+#signupdiv <=  signuppassword + html.BR()
+#signupdiv <=  signupconfirm + html.BR()
+#submitsignup = html.BUTTON("Sign Up")
 #submitsignup.bind"click", signup)
-signupdiv <= submitsignup
-cont <= signupdiv
+#signupdiv <= submitsignup
+#cont <= signupdiv
 #while not signedin:
 #    if lastsignbool != signupbool:
         #this means that the page loaded has changed. 
