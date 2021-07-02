@@ -28,8 +28,8 @@ def switchsignup(_):
     #TODO: store account information in db 
     #signedin = True
 lastsignbool = True
-signupbutton.BIND("click", switchsignup)
-loginbutton.BIND("click", switchlogin) 
+#signupbutton.BIND("click", switchsignup)
+#loginbutton.BIND("click", switchlogin) 
 signinscreendiv <= signupbutton + html.BR()
 #newdiv <= loginbutton
 cont <= signinscreendiv
