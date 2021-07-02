@@ -33,7 +33,7 @@ lastsignbool = True
 signinscreendiv <= signupbutton + html.BR()
 #newdiv <= loginbutton
 cont <= signinscreendiv
-cont[signinsrceendiv][signupbutton].BIND("click", switchsignup)
+cont["signinsrceendiv"]["signupbutton"].BIND("click", switchsignup)
 #signupdiv = html.DIV(id = "signupdiv")
 #signupusername = html.INPUT(type="text", name="username", value="Username")
 #signuppassword = html.INPUT(type="text", name="password", value="Password")
