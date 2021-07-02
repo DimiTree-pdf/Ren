@@ -5,7 +5,7 @@ from browser import document, prompt, html, alert
 signupbool = True
 signedin = False
 cont = document["container"]
-newdiv = html.DIV(id = "newdiv")
+signinscreendiv = html.DIV(id = "signinscreendiv")
 signupbutton = html.BUTTON("Sign Up Page")
 loginbutton = html.BUTTON("Log In Page")
 def switchlogin(_):
@@ -30,9 +30,9 @@ def switchsignup(_):
 lastsignbool = True
 signupbutton.BIND("click", switchsignup)
 loginbutton.BIND("click", switchlogin) 
-newdiv <= signupbutton + html.BR()
-newdiv <= loginbutton
-cont <= newdiv
+signinscreendiv <= signupbutton + html.BR()
+#newdiv <= loginbutton
+cont <= signinscreendiv
 #signupdiv = html.DIV(id = "signupdiv")
 #signupusername = html.INPUT(type="text", name="username", value="Username")
 #signuppassword = html.INPUT(type="text", name="password", value="Password")
