@@ -8,6 +8,7 @@ cont = document["container"]
 signinscreendiv = html.DIV(id = "signinscreendiv")
 signupbutton = html.BUTTON("Sign Up Page")
 loginbutton = html.BUTTON("Log In Page")
+alert("alert test")
 def switchlogin(_):
     signupbool = False
 def switchsignup(_):
@@ -30,10 +31,10 @@ def switchsignup(_):
     #signedin = True
 lastsignbool = True
 #loginbutton.bind("click", switchlogin) 
+signupbutton.bind("click", switchsignup)
 signinscreendiv <= signupbutton + html.BR()
 #newdiv <= loginbutton
 cont <= signinscreendiv
-cont["signinsrceendiv"]["signupbutton"].bind("click", switchsignup)
 #signupdiv = html.DIV(id = "signupdiv")
 #signupusername = html.INPUT(type="text", name="username", value="Username")
 #signuppassword = html.INPUT(type="text", name="password", value="Password")
