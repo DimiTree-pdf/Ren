@@ -10,8 +10,10 @@ signupbutton = html.BUTTON("Sign Up Page")
 loginbutton = html.BUTTON("Log In Page")
 def switchlogin(_):
     signupbool = False
+     _.stopPropagation
 def switchsignup(_):
     signupbool = True
+    _.stopPropagation
 def signup(_):
     username = cont["signupdiv"]["signupusername"].value
     password = cont["signupdiv"]["signuppassword"].value
@@ -27,6 +29,7 @@ def signup(_):
     #we don't have a working database yet so we'll just leave this part blank for now
     #TODO: store account information in db 
     signedin = True
+    _.stopPropagation
 lastsignbool = True
 loginbutton.bind("click", switchlogin) 
 signupbutton.bind("click", switchsignup)
@@ -42,6 +45,7 @@ def fillsignupinputs(_):
     for child in signupdiv:
         alert(child.class_name)
 #bind click to inputs so that they delete their text when clicked in
+signupdiv.bind("click", fillsignupinputs)
 signupdiv <=  signupusername + html.BR()
 signupdiv <=  signuppassword + html.BR()
 signupdiv <=  signupconfirm + html.BR()
