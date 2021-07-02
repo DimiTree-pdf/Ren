@@ -13,20 +13,20 @@ def switchlogin(_):
 def switchsignup(_):
     signupbool = True
 def signup(_):
-    #username = cont["signupdiv"]["signupusername"].value
-    #password = cont["signupdiv"]["signuppassword"].value
-    #confirm = cont["signupdiv"]["signupconfirm"].value
-    #if (not username | not password | not confirm) | (username == "Username" | password == "Password" | confirm == "Confirm Password"):
-    #  alert("You must enter a username and a password")
+    username = cont["signupdiv"]["signupusername"].value
+    password = cont["signupdiv"]["signuppassword"].value
+    confirm = cont["signupdiv"]["signupconfirm"].value
+    if (not username | not password | not confirm) | (username == "Username" | password == "Password" | confirm == "Confirm Password"):
+      alert("You must enter a username and a password")
     #TODO: check if username is taken
-    #if confirm != password:
-    #   alert("Passwords do not match!")
-    #salt = secrets.token_hex(64)
-    #hashedpassword = ph.hash(password + salt)
+    if confirm != password:
+       alert("Passwords do not match!")
+    salt = secrets.token_hex(64)
+    hashedpassword = ph.hash(password + salt)
     #this part of the code is where we would store the username, salt, and hashed password in a database
     #we don't have a working database yet so we'll just leave this part blank for now
     #TODO: store account information in db 
-    #signedin = True
+    signedin = True
 lastsignbool = True
 loginbutton.bind("click", switchlogin) 
 signupbutton.bind("click", switchsignup)
