@@ -35,6 +35,7 @@ loginbutton.bind("click", switchlogin)
 signupbutton.bind("click", switchsignup)
 switchtable = html.TABLE()
 switchtable <= html.TR(html.TD(signupbutton) + html.TD(loginbutton))
+switchtable.style = {"text-align": "center"}
 signinscreendiv <= switchtable
 signinscreendiv.style = {"text-align": "center"}
 cont <= signinscreendiv
@@ -55,6 +56,7 @@ signuptable <= html.TR( html.TD(confirmmsg) + html.TD(signupconfirm))
         #alert(child.class_name)
 #bind click to inputs so that they delete their text when clicked in
 #signupdiv.bind("click", fillsignupinputs)
+signuptable.style = {"text-align": "center"}
 signupdiv <=  signuptable + html.BR()
 sbsudiv = html.DIV(id = "sbsudiv")
 submitsignup = html.BUTTON("Sign Up")
