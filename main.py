@@ -55,10 +55,12 @@ signuptable <= html.TR( html.TD(confirmmsg) + html.TD(signupconfirm))
 #bind click to inputs so that they delete their text when clicked in
 #signupdiv.bind("click", fillsignupinputs)
 signupdiv <=  signuptable + html.BR()
+sbsudiv = html.DIV(id = "sbsudiv")
 submitsignup = html.BUTTON("Sign Up")
-submitsignup.style = {"text-align": "center"}
+sbsu <= submitsignup
+sbsu.style = {"text-align": "center"}
 #submitsignup.bind("click", signup)
-signupdiv <= submitsignup
+signupdiv <= sbsu
 cont <= signupdiv
 #while not signedin:
 #    if lastsignbool != signupbool:
