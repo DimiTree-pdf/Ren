@@ -5,6 +5,7 @@ from browser import document, prompt, html, alert
 signupbool = True
 signedin = False
 cont = document["container"]
+#cont.style = {"position": "absolute"}
 signinscreendiv = html.DIV(id = "signinscreendiv")    
 signupbutton = html.BUTTON("Sign Up Page")
 loginbutton = html.BUTTON("Log In Page")
@@ -37,6 +38,7 @@ switchtable = html.TABLE()
 switchtable <= html.TR(html.TD(signupbutton) + html.TD(loginbutton))
 signinscreendiv <= switchtable
 cont <= signinscreendiv
+signinscreendiv.style{"text-align": "center"}
 signupdiv = html.DIV(id = "signupdiv")
 usernamemsg = html.DIV("Enter username:")
 passwordmsg = html.DIV("Enter password:")
