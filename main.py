@@ -45,7 +45,7 @@ signupconfirm = html.INPUT(type="text", name="Confirm Password", value="Confirm 
     #for child in signupdiv:
         #alert(child.class_name)
 #bind click to inputs so that they delete their text when clicked in
-signupdiv.bind("click", fillsignupinputs)
+#signupdiv.bind("click", fillsignupinputs)
 signupdiv <=  signupusername + html.BR()
 signupdiv <=  signuppassword + html.BR()
 signupdiv <=  signupconfirm + html.BR()
