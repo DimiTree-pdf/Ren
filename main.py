@@ -56,6 +56,7 @@ signuptable <= html.TR( html.TD(confirmmsg) + html.TD(signupconfirm))
 #signupdiv.bind("click", fillsignupinputs)
 signupdiv <=  signuptable + html.BR()
 submitsignup = html.BUTTON("Sign Up")
+submitsignup.style = {"text-align": "center"}
 #submitsignup.bind("click", signup)
 signupdiv <= submitsignup
 cont <= signupdiv
