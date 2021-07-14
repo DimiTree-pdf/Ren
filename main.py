@@ -58,7 +58,7 @@ signupdiv <=  signuptable + html.BR()
 sbsudiv = html.DIV(id = "sbsudiv")
 submitsignup = html.BUTTON("Sign Up")
 sbsu <= submitsignup
-sbsu.style = {"text-align": "center"}
+#sbsu.style = {"text-align": "center"}
 #submitsignup.bind("click", signup)
 signupdiv <= sbsu
 cont <= signupdiv
