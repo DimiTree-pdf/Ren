@@ -38,7 +38,7 @@ switchtable = html.TABLE()
 switchtable <= html.TR(html.TD(signupbutton) + html.TD(loginbutton))
 signinscreendiv <= switchtable
 cont <= signinscreendiv
-signinscreendiv.style{"top": 100}
+signinscreendiv.style{"top": "100px"}
 signupdiv = html.DIV(id = "signupdiv")
 usernamemsg = html.DIV("Enter username:")
 passwordmsg = html.DIV("Enter password:")
