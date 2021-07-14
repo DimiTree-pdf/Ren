@@ -50,7 +50,7 @@ signupdiv <=  signupusername + html.BR()
 signupdiv <=  signuppassword + html.BR()
 signupdiv <=  signupconfirm + html.BR()
 submitsignup = html.BUTTON("Sign Up")
-submitsignup.bind("click", signup)
+#submitsignup.bind("click", signup)
 signupdiv <= submitsignup
 cont <= signupdiv
 #while not signedin:
