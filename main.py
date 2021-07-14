@@ -18,7 +18,7 @@ def signup(_):
     username = cont["signupdiv"]["signupusername"].value
     password = cont["signupdiv"]["signuppassword"].value
     confirm = cont["signupdiv"]["signupconfirm"].value
-    if (not username | not password | not confirm) | (username == "Username" | password == "Password" | confirm == "Confirm Password"):
+    if (not username | not password | not confirm):
       alert("You must enter a username and a password")
     #TODO: check if username is taken
     if confirm != password:
@@ -37,18 +37,27 @@ signinscreendiv <= signupbutton + html.BR()
 signinscreendiv <= loginbutton
 cont <= signinscreendiv
 signupdiv = html.DIV(id = "signupdiv")
-signupusername = html.INPUT(type="text", name="Username", value="Username")
-signuppassword = html.INPUT(type="text", name="Password", value="Password")
-signupconfirm = html.INPUT(type="text", name="Confirm Password", value="Confirm Password")
+usernamemsg = html.DIV("Enter username")
+passwordmsg = html.DIV("Enter password")
+confirmmsg = html.DIV("Confirm password")
+signupusername = html.INPUT(type="text", name="Username", value="")
+signuppassword = html.INPUT(type="text", name="Password", value="")
+signupconfirm = html.INPUT(type="text", name="Confirm Password", value="")
+usernamediv = html.DIV(id = "undiv")
+passworddiv = html.DIV(id = "pwdiv")
+confirmdiv = html.DIV(id = "cfmdiv")
+usernamediv <= usernamemsg + html.BR() + signupusername
+passworddiv <= passwordmsg + html.BR() + signuppassword
+confirmdiv <= confirmmsg + html.BR() + signupconfirm
 #when mouse clicks outside of inputs, the filler text should be replaced
 #def fillsignupinputs(_):
     #for child in signupdiv:
         #alert(child.class_name)
 #bind click to inputs so that they delete their text when clicked in
 #signupdiv.bind("click", fillsignupinputs)
-signupdiv <=  signupusername + html.BR()
-signupdiv <=  signuppassword + html.BR()
-signupdiv <=  signupconfirm + html.BR()
+signupdiv <=  usernamediv + html.BR()
+signupdiv <=  passworddiv + html.BR()
+signupdiv <=  confirmdiv + html.BR()
 submitsignup = html.BUTTON("Sign Up")
 #submitsignup.bind("click", signup)
 signupdiv <= submitsignup
