@@ -37,27 +37,23 @@ signinscreendiv <= signupbutton + html.BR()
 signinscreendiv <= loginbutton
 cont <= signinscreendiv
 signupdiv = html.DIV(id = "signupdiv")
-usernamemsg = html.DIV("Enter username")
-passwordmsg = html.DIV("Enter password")
-confirmmsg = html.DIV("Confirm password")
+usernamemsg = html.DIV("Enter username:")
+passwordmsg = html.DIV("Enter password:")
+confirmmsg = html.DIV("Confirm password:")
 signupusername = html.INPUT(type="text", name="Username", value="")
 signuppassword = html.INPUT(type="text", name="Password", value="")
 signupconfirm = html.INPUT(type="text", name="Confirm Password", value="")
-usernamediv = html.DIV(id = "undiv")
-passworddiv = html.DIV(id = "pwdiv")
-confirmdiv = html.DIV(id = "cfmdiv")
-usernamediv <= usernamemsg + html.BR() + signupusername
-passworddiv <= passwordmsg + html.BR() + signuppassword
-confirmdiv <= confirmmsg + html.BR() + signupconfirm
+signuptable = html.TABLE()
+signuptable <= html.TR( html.TD(usernamemsg) + html.TD(signupusername))
+signuptable <= html.TR( html.TD(passwordmsg) + html.TD(signuppassword))
+signuptable <= html.TR( html.TD(confirmmsg) + html.TD(signupconfirm))
 #when mouse clicks outside of inputs, the filler text should be replaced
 #def fillsignupinputs(_):
     #for child in signupdiv:
         #alert(child.class_name)
 #bind click to inputs so that they delete their text when clicked in
 #signupdiv.bind("click", fillsignupinputs)
-signupdiv <=  usernamediv + html.BR()
-signupdiv <=  passworddiv + html.BR()
-signupdiv <=  confirmdiv + html.BR()
+signupdiv <=  signuptable + html.BR()
 submitsignup = html.BUTTON("Sign Up")
 #submitsignup.bind("click", signup)
 signupdiv <= submitsignup
