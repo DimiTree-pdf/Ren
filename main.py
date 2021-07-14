@@ -33,8 +33,9 @@ def signup(_):
 lastsignbool = True
 loginbutton.bind("click", switchlogin) 
 signupbutton.bind("click", switchsignup)
-signinscreendiv <= signupbutton + html.BR()
-signinscreendiv <= loginbutton
+switchtable = html.TABLE()
+switchtable <= html.TR(html.TD(signupbutton) + html.TD(loginbutton))
+signinscreendiv <= switchtable
 cont <= signinscreendiv
 signupdiv = html.DIV(id = "signupdiv")
 usernamemsg = html.DIV("Enter username:")
