@@ -60,7 +60,7 @@ submitsignup = html.BUTTON("Sign Up")
 sbsudiv <= submitsignup
 sbsudiv.style = {"text-align": "center"}
 #submitsignup.bind("click", signup)
-signupdiv <= sbsu
+signupdiv <= sbsudiv
 cont <= signupdiv
 #while not signedin:
 #    if lastsignbool != signupbool:
