@@ -36,6 +36,7 @@ signupbutton.bind("click", switchsignup)
 switchtable = html.TABLE()
 switchtable <= html.TR(html.TD(signupbutton) + html.TD(loginbutton))
 signinscreendiv <= switchtable
+signinscreendiv.style = {"text-align": "center"}
 cont <= signinscreendiv
 signupdiv = html.DIV(id = "signupdiv")
 usernamemsg = html.DIV("Enter username:")
@@ -61,6 +62,7 @@ sbsudiv <= submitsignup
 sbsudiv.style = {"text-align": "center"}
 #submitsignup.bind("click", signup)
 signupdiv <= sbsudiv
+signupdiv.style = {"text-align": "center"}
 cont <= signupdiv
 #while not signedin:
 #    if lastsignbool != signupbool:
