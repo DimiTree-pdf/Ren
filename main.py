@@ -5,7 +5,7 @@ from browser import document, prompt, html, alert
 signupbool = True
 signedin = False
 cont = document["container"]
-#cont.style = {"position": "absolute"}
+cont.style = {"position": "absolute"}
 signinscreendiv = html.DIV(id = "signinscreendiv")    
 signupbutton = html.BUTTON("Sign Up Page")
 loginbutton = html.BUTTON("Log In Page")
@@ -38,7 +38,7 @@ switchtable = html.TABLE()
 switchtable <= html.TR(html.TD(signupbutton) + html.TD(loginbutton))
 signinscreendiv <= switchtable
 cont <= signinscreendiv
-signinscreendiv.style{"text-align": "center"}
+signinscreendiv.style{"top": 100}
 signupdiv = html.DIV(id = "signupdiv")
 usernamemsg = html.DIV("Enter username:")
 passwordmsg = html.DIV("Enter password:")
@@ -64,7 +64,6 @@ sbsudiv.style = {"text-align": "center"}
 #submitsignup.bind("click", signup)
 signupdiv <= sbsudiv
 cont <= signupdiv
-cont.style = {"text-align" : "center"} 
 #while not signedin:
 #    if lastsignbool != signupbool:
         #this means that the page loaded has changed. 
