@@ -5,3 +5,5 @@ cont = document[container]
 fileTable = html.TABLE()
 text = "Upload .ren file:"
 fileInput = html.INPUT(type="file", name="fileUpload")
+fileTable <= html.TR(html.TD(text) + html.TD(fileInput))
+comt <= fileTable + html.BR()
